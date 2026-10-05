@@ -1,163 +1,50 @@
 # Practical-2: Activity Lifecycle & Basic UI
 
-## Aim
+## AIM & Objective
 
-Develop an Android application to understand the **Activity Lifecycle** and demonstrate basic Android UI design. The application displays lifecycle events using **Logcat**, **Toast messages**, and **Snackbar messages**.
-
----
-
-## Objective
-
-The main objectives of this practical are:
-
-- To understand the Android Activity Lifecycle.
-- To implement different lifecycle methods.
-- To observe lifecycle events using Logcat.
-- To display lifecycle events using Toast messages.
-- To display lifecycle events using Snackbar messages.
-- To create and style a basic Android user interface.
-
-The Activity Lifecycle methods demonstrated are:
-
-- `onCreate()`
-- `onStart()`
-- `onResume()`
-- `onPause()`
-- `onStop()`
-- `onRestart()`
-- `onDestroy()`
+Develop an Android application to demonstrate the **Activity Lifecycle** methods (`onCreate`, `onStart`, `onResume`, etc.) along with **Basic UI** styling. The application observes lifecycle transitions using **Logcat**, **Toast**, and **Snackbar** messages.
 
 ---
 
-# Output Screenshots
+## Output Screenshots
 
-## 1. Main UI – onCreate
+### 1. Logcat Output (Lifecycle Sequence)
 
-The application starts with a yellow background and displays **Hello World** in the center of the screen. A Toast message is also displayed when the `onCreate()` method is called.
+[Logcat Output](Logcat%20Output.png) ([image](Logcat%20Output.png))
 
-![onCreate Output](onCreate.png)
+### 2. Toast Message Demonstration
 
----
+| **onCreate** | **onResume** | **onDestroy** |
+|--------------|--------------|---------------|
+| [image](onCreate.png) | [image](onResume.png) | [image](onDestroy.png) |
 
-## 2. Logcat Output
+### 3. Snackbar Message Demonstration
 
-The following screenshot shows the Activity Lifecycle events recorded in **Logcat**.
-
-![Logcat Output](Logcat%20Output.png)
-
----
-
-## 3. Toast Messages
-
-Toast messages are displayed when different Activity Lifecycle methods are executed.
-
-### onCreate()
-
-![onCreate Toast](onCreate.png)
-
-### onResume()
-
-![onResume Toast](onResume.png)
-
-### onDestroy()
-
-![onDestroy Toast](onDestroy.png)
+| **onStart** | **onResume** | **onRestart** |
+|-------------|--------------|---------------|
+| [image](onStart.png) | [image](onResume%20%282%29.png) | [image](onRestart.png) |
 
 ---
 
-## 4. Snackbar Messages
+## UI Implementation Details
 
-Snackbar messages are displayed at the bottom of the application screen for different lifecycle events.
-
-### onStart()
-
-![onStart Snackbar](onStart.png)
-
-### onResume()
-
-![onResume Snackbar](onResume%20%282%29.png)
-
-### onRestart()
-
-![onRestart Snackbar](onRestart.png)
+- **Layout:** `ConstraintLayout` with a Yellow Background (`#FFFF00`).
+- **TextView:** Displays "Hello World" at the center of the screen.
+- **Text Color:** Holo Blue Bright.
+- **Text Size:** 27sp.
+- **Text Style:** ***Bold & Italic***.
 
 ---
 
-## 5. onDestroy Output
-
-The following screenshot shows the message displayed when the Activity is destroyed.
-
-![onDestroy Output](onDestroy.png)
-
----
-
-## 6. Complete Lifecycle Screenshots
-
-The following screenshots demonstrate the different Activity Lifecycle states:
-
-### onCreate
-
-![onCreate](onCreate.png)
-
-### onStart
-
-![onStart](onStart.png)
-
-### onResume
-
-![onResume](onResume.png)
-
-### onPause / Resume
-
-![onResume 2](onResume%20%282%29.png)
-
-### onRestart
-
-![onRestart](onRestart.png)
-
-### onDestroy
-
-![onDestroy](onDestroy.png)
-
----
-
-# User Interface
-
-The application uses **ConstraintLayout** to create the user interface.
-
-### UI Features
-
-| Property | Value |
-|----------|-------|
-| Layout | ConstraintLayout |
-| Background | Yellow (`#FFFF00`) |
-| Text | Hello World |
-| Text Position | Center |
-| Text Size | `27sp` |
-| Text Color | Holo Blue Bright |
-| Text Style | Bold & Italic |
-
----
-
-# Activity Lifecycle Implementation
-
-The lifecycle methods are implemented inside `MainActivity.kt`.
-
-A common `display()` function is used to show lifecycle messages through **Logcat**, **Toast**, and **Snackbar**.
+## Lifecycle Logic (`MainActivity.kt`)
 
 ```kotlin
 private fun display(msg: String) {
-    Log.i("MainActivity", msg)
-
-    Toast.makeText(
-        this,
-        msg,
-        Toast.LENGTH_SHORT
-    ).show()
-
+    Log.i("MainActivity", msg) // Logcat
+    Toast.makeText(this, msg, Toast.LENGTH_SHORT).show() // Toast
     Snackbar.make(
         findViewById(R.id.main),
         msg,
         Snackbar.LENGTH_SHORT
-    ).show()
+    ).show() // Snackbar
 }
