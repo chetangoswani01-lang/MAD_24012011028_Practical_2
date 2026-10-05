@@ -16,13 +16,13 @@ Develop an Android application to demonstrate the **Activity Lifecycle** methods
 
 | **onCreate** | **onResume** | **onDestroy** |
 |--------------|--------------|---------------|
-| [image](onCreate.png) | [image](onResume.png) | [image](onDestroy.png) |
+| (onCreate.png) | (onResume.png) | (onDestroy.png) |
 
 ### 3. Snackbar Message Demonstration
 
 | **onStart** | **onResume** | **onRestart** |
 |-------------|--------------|---------------|
-| [image](onStart.png) | [image](onResume%20%282%29.png) | [image](onRestart.png) |
+| (onStart.png) |(onResume%20%282%29.png) | (onRestart.png) |
 
 ---
 
