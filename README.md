@@ -5,7 +5,7 @@
 Develop an Android application to demonstrate the **Activity Lifecycle** methods (`onCreate`, `onStart`, `onResume`, etc.) along with **Basic UI** styling. The application observes lifecycle transitions using **Logcat**, **Toast**, and **Snackbar** messages.
 
 ---
-
+ 
 ## Output Screenshots
 
 ### 1. Logcat Output (Lifecycle Sequence)
