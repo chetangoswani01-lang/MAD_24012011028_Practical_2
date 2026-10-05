@@ -32,7 +32,7 @@ The Logcat screenshot shows the sequence of Activity Lifecycle methods executed 
 
 ---
 
-### 2. Toast Messages
+### 2. Toast Messages 
 
 The application displays Toast messages whenever specific lifecycle methods are called.
 
