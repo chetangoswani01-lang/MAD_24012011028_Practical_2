@@ -7,7 +7,7 @@ Develop an Android application to demonstrate the **Activity Lifecycle** methods
 ---
  
 ## Output Screenshots
-
+ 
 ### 1. Logcat Output (Lifecycle Sequence)
 
 [Logcat Output](Logcat%20Output.png) ([image](Logcat%20Output.png))
